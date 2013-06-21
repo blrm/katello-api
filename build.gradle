@@ -214,7 +214,7 @@ task run_katello(dependsOn: 'testClasses') << {
 }
 
 task run_coverage(dependsOn: 'testClasses') << {
-  ignoreFailures = True
+  ignoreFailures = true
   javaexec {
     def testnames = System.getProperty("testng.testnames", "${TESTNG_KATELLO_DEFAULT_TESTS}")
     def excludegroups = System.getProperty("testng.excludegroups", "${TESTNG_KATELLO_EXCLUDE_GROUPS}")
